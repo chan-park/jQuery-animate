@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link type="text/css" rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <div class="container">
+            
+            <h1 id="test-header">I'm going to test animation.</h1>    
+            
+        </div>
+    </body>
+</html>
+
+<script src="jquery-3.1.0.js"></script>
+
+<script>
+
+    $(document).ready(function() {
+        setInterval(function() {
+            $("#test-header").animate({"left":"3000px"}, 10000, function() {
+                $("#test-header").css("left","-1000px");
+            });
+        
+        }, 1000);
+    });
+</script>
